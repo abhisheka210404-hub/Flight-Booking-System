@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'home.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="f-info">
+
+{% for i in data %}
+
+    <div class="u-info">
+
+        
+<div class="left">
+    
+        <h2>Fligth Company:{{i.flight.flight_company}}</h2>
+        <h2>Fligth name:{{i.flight.flight_name}}</h2>
+        <h2>Fligth number:{{i.flight.flight_number}}</h2>
+        <h3>from :{{i.flight.From}}</h3>
+        <h3>to :{{i.flight.to}}</h3>
+        <h3>Departure time :{{i.flight.departure_time}}</h3>
+        <h3>fligth date :{{i.flight.flight_date}}</h3>
+        <h3>Ticket price :{{i.flight.ticket_price}}</h3>
+</div>
+
+    <div class="rigth">
+        
+        <h3>name:{{i.name}}</h3>
+        <h3>email:{{i.email}}</h3>
+        <h3>age:{{i.age}}</h3>
+        <h3>phone:{{i.phno}}</h3>
+        <h3>adhar:{{i.adhar}}</h3>
+        <h3>seat class:{{i.seat_class}}</h3>
+        <h3>seat number:{{i.seat_number}}</h3>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

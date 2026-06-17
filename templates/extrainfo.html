@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>Register</title>
+</head>
+<body>
+    <form action="" method='POST' enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+        <label for="">State:</label>
+        <input type="text" name='state'>
+
+        <label for="">Distic:</label>
+        <input type="text" name='dist'>
+
+        <label for="">Address:</label>
+        <textarea name="address" id="" name='address' rows=5, cols=40>
+
+        </textarea>
+
+        <label for="">Photo :</label>
+        <input type="file" name='photo'>
+
+        <div class="btns">
+            
+        <button type="submit">Submit</button>
+
+        <button type="reset" >Clear</button>
+
+        </div>
+        
+        <h5 id='eror'>
+            {% if messages %}
+                {% for i in messages %}
+                    {{i}}
+                {% endfor %}
+            {% endif %}
+        </h5>
+
+    </form>
+
+</body>
+</html>

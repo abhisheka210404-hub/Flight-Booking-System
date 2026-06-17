@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>Register</title>
+</head>
+<body>
+    <form action="" method='POST'>
+
+        {% csrf_token %}
+
+        {% if show %}
+
+        <label for="">New Password:</label>
+        <input type="password" name='npass'><br>
+
+        <label for="">Confim Password:</label>
+        <input type="password" name='cpass'><br>
+
+        {% else %}
+
+        <label for="">Enter UserName:</label>
+        <input type="text" name='uname'>
+
+        {% endif %}
+
+
+        <button type="submit">Submit</button>
+
+        <button type="reset" >Clear</button>
+
+        <h5 id='eror'>
+            {% if messages %}
+                {% for i in messages %}
+                    {{i}}
+                {% endfor %}
+            {% endif %}
+        </h5>
+
+    </form>
+
+</body>
+</html>

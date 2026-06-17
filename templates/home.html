@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'home.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="search">
+    <form action="" method='GET'>
+
+    <input type="text" name="From" id="" placeholder='Enter Departure City'><br>
+    <input type="text" name="to" id="" placeholder='Enter Destination City'><br>
+
+    <button type="submit">Search</button>
+
+    </form>
+
+</div>
+
+<div class="main">
+
+    {% for i in data %}
+
+        <div class="sub">
+
+            <div class="left">
+            <h2>Fligth Company:{{i.flight_company}}</h2>
+            <h3>Fligth Name:{{i.flight_name}}</h3>
+            <h3>Fligth Number:{{i.flight_number}}</h3>
+            <h3>From :{{i.From}}</h3>
+            <h3>To:{{i.to}}</h3>
+            </div>
+          
+            <div class="right">
+            <h4>Departure Time :{{i.departure_time}}</h4>
+            <h4>Fligth Date:{{i.flight_date}}</h4>
+            <h4>Ticket Price : {{i.ticket_price}}</h4>
+            <a href="{% url 'confirm' i.id %}">Book Now</a>
+            </div>
+
+
+        </div>
+
+    {% endfor %}
+
+</div>
+    
+{% endblock %}

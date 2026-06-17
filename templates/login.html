@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>Login</title>
+</head>
+<body>
+  <div class="form-parent">
+
+     <h1>Login Form</h1>
+
+
+
+
+      <form action="" method='POST' id='login'>
+
+        {% csrf_token %}
+
+        <label for="">Enter UserName:</label>
+        <input type="text" name='uname'>
+
+        <label for="">Password:</label>
+        <input type="password" name='pass'><br>
+
+
+       <div class="btns">
+
+         <button type="submit">Submit</button>
+
+        <button type="reset" >Clear</button>
+
+       </div>
+
+       <div class="to-do">
+        {% comment %} <a href="{% url 'register' %}">Register </a> <br> {% endcomment %}
+        <li><a href="{% url 'register' %}">Register If Not</a></li>
+        <li><a href="{% url 'forgot_pasw' %}">Forgot Password</a></li>
+
+       {% comment %} <a href="{% url 'forgot_pasw' %}">Forgot Password</a> {% endcomment %}
+       </div>
+
+         <h5 id='eror'>
+            {% if messages %}
+                {% for i in messages %}
+                    {{i}}
+                {% endfor %}
+            {% endif %}
+        </h5>
+
+    </form>
+  </div>
+    
+</body>
+</html>

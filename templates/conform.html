@@ -1,0 +1,86 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'home.css' %}">
+
+{% endblock %}
+
+{% block content %}
+        <form action="" method='POST' id='dtls'>
+            {% csrf_token %}
+
+    <div class="details">
+        
+         <div class="left">
+               <label for="">Fligth Company</label>
+            <input type="text" value="{{data.flight_company}}" disabled><br>
+
+            <label for="">Fligth Name</label>
+            <input type="text" value="{{data.flight_name}}" disabled><br><br>
+
+            <label for="">Fligth Number</label>
+            <input type="text" value="{{data.flight_number}}" disabled><br>
+
+
+            <label for="">From</label>
+            <input type="text" value='{{data.From}}' disabled><br>
+
+            <label for="">To</label>
+            <input type="text" value="{{data.to}}" disabled><br>
+
+            <label for="">Departure Time</label>
+            <input type="text" value="{{data.departure_time}}" disabled><br>
+
+
+
+            <label for="">fligth Date</label>
+            <input type="text" value="{{data.flight_date}}" disabled><br>
+
+
+            <label for="">Total Price</label>
+            <input type="number" value="{{data.ticket_price}}" disabled><br>
+         </div>
+
+
+            <hr>
+
+            <div class="right">
+                
+            <label for="">Your Name:</label>
+            <input type="text" name='name' ><br>
+
+            <label for="">Enter Email</label>
+            <input type="email" name="email" id=""><br>
+
+            <label for="">Enter PhoneNumber</label>
+            <input type="number" name="phno" id=""><br>
+
+            <label for="">Adhar Number:</label>
+            <input type="number" name="adhar" id=""><br>
+
+            <label for="">Age</label>
+            <input type="number" name="age" id=""><br>
+
+            <label for="">Seat Class</label>
+            <select name="seatclass" id="">
+                <option value="" selected disabled >Select Seat Class</option>
+                <option value="Business class">Business</option>
+                <option value="Econamy class">Econamy</option>
+            </select><br>
+
+            <label for="">Seat Number</label>
+            <input type="number" name="seatnumber" id=""><br>
+
+
+            <br>
+
+            <button type="submit">Book Ticket</button>
+            </div>
+    </div>
+
+    </form>
+    
+{% endblock %}
+

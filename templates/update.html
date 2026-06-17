@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'home.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+    <form action="" method='POST'>
+        {% csrf_token %}
+                 <hr>
+
+            <h2>User Information:</h2>
+
+            <label for="">Your Name:</label>
+            <input type="text" name='name' value={{data.name}}><br>
+
+            <label for="">Enter Email</label>
+            <input type="email" name="email" id="" value={{data.email}}><br>
+
+            <label for="">Enter PhoneNumber</label>
+            <input type="number" name="phno" id="" value={{data.phno}}><br>
+
+            <label for="">Adhar Number:</label>
+            <input type="number" name="adhar" id="" value={{data.adhar}}><br>
+
+            <label for="">Age</label>
+            <input type="number" name="age" id="" value={{data.age}}><br>
+
+            <label for="">Seat Class</label>
+            <input type="text" name='seatclass' value='{{data.seat_class}}'>
+
+            <label for="">Seat Number</label>
+            <input type="number" name="seatnumber" id="" value={{data.seat_number}}><br>
+
+            <br>
+
+            <button type="submit">Update Ticket</button>
+
+    </form>
+
+
+    
+{% endblock %}

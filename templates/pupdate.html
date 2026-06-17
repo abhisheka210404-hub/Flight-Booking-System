@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>Register</title>
+</head>
+<body>
+    <form action="" method='POST'>
+
+        {% csrf_token %}
+
+        <label for="">UserName:</label>
+        <input type="text" value='{{data.username}}' disabled>
+
+        <label for="">Enter FirstName:</label>
+        <input type="text" name='fname' value='{{data.first_name}}'>
+
+        <label for="">Enter LastdName:</label>
+        <input type="text" name='lname' value='{{data.last_name}}'>
+
+        <label for="">Email:</label>
+        <input type="email" name='email' value='{{data.email}}'>
+
+        <div class="btns">
+            
+        <button type="submit">Submit</button>
+
+        <button type="reset" >Clear</button>
+
+        </div>
+        
+        <h5 id='eror'>
+            {% if messages %}
+                {% for i in messages %}
+                    {{i}}
+                {% endfor %}
+            {% endif %}
+        </h5>
+
+    </form>
+
+</body>
+</html>

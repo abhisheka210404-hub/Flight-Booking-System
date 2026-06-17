@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'home.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="f-info">
+{% for i in data %}
+
+    <div class="u-info">
+
+      <div class="left">
+        <h2>Fligth Company:{{i.flight.flight_company}}</h2>
+        <h2>Fligth Name:{{i.flight.flight_name}}</h2>
+        <h2>Fligth Number:{{i.flight.flight_number}}</h2>
+        <h3>From:{{i.flight.From}}</h3>
+        <h3>To: {{i.flight.to}}</h3>
+        <h3>Departure Time :{{i.flight.departure_time}}</h3>
+        <h3>Fligth Date :{{i.flight.flight_date}}</h3>
+        <h3> Total Price :{{i.flight.ticket_price}}</h3>
+
+
+      </div>
+
+        <div class="rigth">
+        <h3>Person Name:{{i.name}}</h3>
+        <h3>Email:{{i.email}}</h3>
+        <h3>age :{{i.age}}</h3>
+        <h3>phone :{{i.phno}}</h3>
+        <h3>adhar :{{i.adhar}}</h3>
+        <h3>seat class :{{i.seat_class}}</h3>
+        <h3>seat number :{{i.seat_number}}</h3>
+
+
+     </div>
+
+      <div class="action">
+
+       <a href="{% url 'cancel' i.id %}">Booking Cancel</a>
+        <a href="{% url 'update' i.id %}">Update</a> 
+
+
+      </div>
+
+        </div>
+
+{% endfor %} 
+</div>  
+
+{% endblock %}

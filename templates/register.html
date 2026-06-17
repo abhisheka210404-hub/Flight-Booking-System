@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>Register</title>
+</head>
+<body>
+
+    {% comment %} <h1>Register Form </h1> {% endcomment %}
+
+    <div class="form-parent">
+
+         <h1>Registration Form</h1>
+
+
+        <form action="" method='POST'>
+
+        {% csrf_token %}
+
+        <label for="">Enter FirstName:</label>
+        <input type="text" name='fname'>
+
+        <label for="">Enter LastdName:</label>
+        <input type="text" name='lname'>
+
+        <label for="">Enter UserName:</label>
+        <input type="text" name='uname'>
+
+        <label for="">Email:</label>
+        <input type="email" name='email'>
+
+        <label for="">Password:</label>
+        <input type="password" name='pass'><br>
+
+
+        <div class="btns">
+            
+        <a href="{% url 'login' %}">Login</a>
+    
+        <button type="submit">Submit</button>
+
+        <button type="reset" >Clear</button>
+
+        </div>
+        
+        <h5 id='eror'>
+            {% if messages %}
+                {% for i in messages %}
+                    {{i}}
+                {% endfor %}
+            {% endif %}
+        </h5>
+
+    </form>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{% static 'home.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="prof">
+
+    <img src={{request.user.extrainfo.photo.url}} alt="not Found">
+    
+    <h3> UserName: {{ request.user.username }} </h3>
+    <h3>First Name: {{ request.user.first_name }} </h3> 
+    <h3>Last Name: {{ request.user.last_name }} </h3>
+    <h3>Email: {{ request.user.email }} </h3>
+
+    {% if request.user.extrainfo %}
+
+    <h3>State: {{request.user.extrainfo.state}} </h3>
+    <h3>Distic: {{request.user.extrainfo.distic}} </h3>
+    <h3>Address: {{request.user.extrainfo.address}}</h3>
+    
+    {% endif %}
+
+    <div class="to-do">
+    <a href="{% url 'reset' %}">Reset Password</a><br>
+    <a href="{% url 'pupdate' %}">Profile Update</a>
+    <a href="{% url 'extrainfo' %}">Add Extra Info</a>
+
+    </div>
+
+    </div>
+
+{% endblock %}
