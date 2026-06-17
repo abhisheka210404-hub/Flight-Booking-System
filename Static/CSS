@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+}
+
+body{
+    background-color: #f4efe6;
+    color: #3d2c1e;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    width: 100%;
+    height: 9vh;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+nav .logo{
+    width: 25%;
+    color: wheat;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav .links{
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav .links a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav .links a:hover{
+    color: wheat;
+}
+
+/* ================= SEARCH ================= */
+
+.search{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.search form{
+    width: 400px;
+}
+.search button{
+    background: cyan;
+    margin-top: 2vh;
+    font-weight: bolder;
+    font-size: large;
+}
+.search button:hover{
+    background: cyan;
+}
+
+/* ================= HOME PAGE ================= */
+
+.main{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4vw;
+}
+
+.sub{
+    width: 25%;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #fffaf0;
+    border-radius: 10px;
+    border: 1px solid #8b7355;
+    box-shadow: 2px 2px 10px gray;
+    /* padding-top:4vh; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+.sub .left{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.sub .lefttwo{
+    margin-top: 10vh;
+}
+.sub .lefttwo .color{
+    background: cyan;
+}
+
+/* .sub.right{
+    width: 45%;
+    padding: 25px;
+    background-color: #fffaf0;
+    border: 1px solid #8b7355;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px gray;
+} */
+.sub .left,
+.sub .right{
+    width: 25%;
+}
+
+.sub h2,
+.sub h3,
+.sub h4{
+    margin-top: 12px;
+}
+.sub h2{
+    color: black;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-bottom: 5vh;
+}
+.sub h3{
+    color: black;
+}
+
+.sub a{
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #8b5a2b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.sub:hover{
+    transform: scale(1.02);
+    transition: .3s;
+    box-shadow: none;
+}
+
+/* ================= FORMS ================= */
+
+form{
+    width: 30%;
+    margin: 40px auto;
+    background-color: #e8dcc6;
+    border: 2px solid #8b7355;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 2px 2px 10px gray;
+}
+
+label{
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea{
+    width: 100%;
+    height: 40px;
+    margin-top: 8px;
+    padding-left: 10px;
+    border: 1px solid #8b7355;
+    border-radius: 5px;
+}
+
+textarea{
+    height: 90px;
+    padding-top: 10px;
+}
+
+button{
+    width: 120px;
+    height: 40px;
+    background-color: #8b5a2b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #6b4423;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.btns a{
+    background-color: #8b5a2b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* ================= LOGIN / REGISTER ================= */
+
+.form-parent{
+    width: 100%;
+}
+
+.form-parent h1{
+    text-align: center;
+    margin-top: 30px;
+    color: #4b3621;
+}
+
+.to-do{
+    margin-top: 20px;
+}
+
+.to-do li{
+    margin-top: 10px;
+}
+
+.to-do a{
+    color: #4b3621;
+}
+
+/* ================= PROFILE ================= */
+
+.prof{
+    width: 35%;
+    margin: 18vh auto;
+    /* margin: auto; */
+    background-color: #fffaf0;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #8b7355;
+    box-shadow: 2px 2px 10px gray;
+    text-align: center;
+}
+
+.prof img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    border: 3px solid #8b5a2b;
+}
+
+.prof h3{
+    margin-top: 15px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.prof .to-do{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+.prof .to-do a{
+    background-color: #8b5a2b;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* ================= BOOKING & HISTORY ================= */
+
+.f-info{
+    width: 100%;
+}
+.u-info .left .number{
+    margin-bottom: 8vh;
+}
+
+.u-info{
+    width: 85%;
+    margin: 12vh auto;
+    padding: 25px;
+    background-color: #fffaf0;
+    border-radius: 10px;
+    border: 1px solid #8b7355;
+    box-shadow: 2px 2px 10px gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.u-info .left,
+.u-info .rigth{
+    width: 40%;
+}
+
+.u-info h2,
+.u-info h3{
+    margin-top: 12px;
+}
+.u-info h2{
+    color: black;
+    font-weight: bolder;
+    font-size: 25px;
+}
+.u-info h3{
+    color: black;
+    font-size: 20px ;
+    font-weight: lighter;
+}
+.u-info .rigth h3{
+    font-weight: light;
+    font-size: 25px;
+    /* color: rgba(0, 0, 0, 0.756); */
+}
+.u-info .head{
+    margin-bottom: 8vh;
+}
+
+.action{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.action a{
+    background-color: #8b5a2b;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* ================= CONFIRM PAGE ================= */
+
+#dtls{
+    width: 80%;
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.details .left,
+.details .right{
+    width: 50%;
+}
+
+.details button{
+    display: block;
+    margin: 20px auto;
+}
+
+/* ================= ERROR ================= */
+
+#eror{
+    text-align: center;
+    margin-top: 20px;
+    color: firebrick;
+}
+
+/* ================= LINKS ================= */
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: .8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    nav{
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav .logo,
+    nav .links{
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .links{
+        margin-top: 15px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    form{
+        width: 90%;
+    }
+
+    .sub,
+    .u-info,
+    .details{
+        flex-direction: column;
+    }
+
+    .sub .left,
+    .sub .right,
+    .u-info .left,
+    .u-info .rigth,
+    .action,
+    .details .left,
+    .details .right{
+        width: 100%;
+    }
+
+    .prof{
+        width: 90%;
+    }
+
+    #dtls{
+        width: 95%;
+    }
+}
+.about-box{
+    width: 70%;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: white;
+    border: 2px solid #1e3c72;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.about-box h1{
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 20px;
+}
+
+.about-box p{
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+    margin-top: 4vh;
+} 
+.about-box a{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+
+}
